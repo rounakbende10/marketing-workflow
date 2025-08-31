@@ -1,131 +1,234 @@
-from crewai import Agent, Crew, Process, Task
-from crewai.project import CrewBase, agent, crew, task
+from crewai import Agent, Task, Crew, Process
+from crewai_tools import SerperDevTool, ScrapeWebsiteTool, DirectoryReadTool, FileWriterTool, FileReadTool, ArxivPaperTool
+from marketing.tools.custom_tool import LinkedInPostAnalyzer, ResearchTopicAnalyzer, ResumeOptimizer, InnovationTracker, ResearchPaperAnalyzer
+import yaml
+from pathlib import Path
+from crewai.project import CrewBase,agent,task,crew
 from crewai.agents.agent_builder.base_agent import BaseAgent
-from typing import List
-from crewai_tools import SerperDevTool,FileWriterTool, FileReadTool, DirectoryReadTool, ScrapeWebsiteTool
-from dotenv import load_dotenv
-from pydantic import BaseModel, Field
-
-_=load_dotenv()
-
-# If you want to run a snippet of code before or after the crew starts,
-# you can use the @before_kickoff and @after_kickoff decorators
-# https://docs.crewai.com/concepts/crews#example-crew-class-with-decorators
-
-class Content(BaseModel):
-    content_type: str = Field(...,
-                              description="The type of content to be created (e.g., blog post, social media post, video)")
-    topic: str = Field(..., description="The topic of the content")
-    target_audience: str = Field(..., description="The target audience for the content")
-    tags: List[str] = Field(..., description="Tags to be used for the content")
-    content: str = Field(..., description="The content itself")
-
 
 @CrewBase
-class Marketing():
-    """Marketing crew"""
-
-    agents: List[BaseAgent]
-    tasks: List[Task]
-
-    # Learn more about YAML configuration files here:
-    # Agents: https://docs.crewai.com/concepts/agents#yaml-configuration-recommended
-    # Tasks: https://docs.crewai.com/concepts/tasks#yaml-configuration-recommended
+class Marketing:
+    agents: list[BaseAgent]
+    tasks: list[Task]
     
-    # If you would like to add tools to your agents, you can learn more about it here:
-    # https://docs.crewai.com/concepts/agents#agent-tools
     @agent
-    def head_of_marketing(self) -> Agent:
+    def ai_ml_research_scientist(self) -> Agent:
         return Agent(
-            config=self.agents_config['head_of_marketing'], # type: ignore[index]
-            tools=[SerperDevTool(),FileWriterTool(), FileReadTool(), DirectoryReadTool('src/marketing/resources/drafts'), ScrapeWebsiteTool()],
-            max_rpm=3,
-            reasoning=True,
-            inject_date=True,
-            allow_delegation=True,
-            verbose=True
-        )
-
-    @agent
-    def content_creator_social_media(self) -> Agent:
-        return Agent(
-            config=self.agents_config['content_creator_social_media'], # type: ignore[index]
-            tools=[FileWriterTool(), FileReadTool(), DirectoryReadTool('src/marketing/resources/drafts'), ScrapeWebsiteTool()],
-            inject_date=True,
-            allow_delegation=True,
-            max_rpm=3,
-            max_iter=30,
-            verbose=True
-        )
-
-    @agent
-    def content_writer_blogs(self) -> Agent:
-        return Agent(
-            config=self.agents_config['content_writer_blogs'], # type: ignore[index]
-            tools=[FileWriterTool(), FileReadTool(), DirectoryReadTool('src/marketing/resources/drafts'), ScrapeWebsiteTool()],
-            max_rpm=3,
-            max_iter=5,
-            allow_delegation=True,
-            inject_date=True,
-            verbose=True
-        )
-
-    @agent
-    def seo_specialist(self) -> Agent:
-        return Agent(
-            config=self.agents_config['seo_specialist'], # type: ignore[index]
-            tools=[FileWriterTool(), FileReadTool(), DirectoryReadTool('src/marketing/resources/drafts'), ScrapeWebsiteTool()],
-            verbose=True,
-            allow_delegation=True,
+            config=self.agents_config['ai_ml_research_scientist'],
+            tools=[
+                SerperDevTool(),
+                ScrapeWebsiteTool(),
+                DirectoryReadTool('resources/drafts'),
+                FileWriterTool(),
+                FileReadTool(),
+                ArxivPaperTool(),
+                LinkedInPostAnalyzer(),
+                ResearchTopicAnalyzer(),
+                ResumeOptimizer(),
+                InnovationTracker(),
+                ResearchPaperAnalyzer()
+            ],
             max_rpm=3,
             max_iter=3,
             reasoning=True,
+            inject_date=True,
+            allow_delegation=True,
+            verbose=True
         )
-
-    # To learn more about structured task outputs,
-    # task dependencies, and task callbacks, check out the documentation:
-    # https://docs.crewai.com/concepts/tasks#overview-of-a-task
+    
+    @agent
+    def research_content_creator(self) -> Agent:
+        return Agent(
+            config=self.agents_config['research_content_creator'],
+            tools=[
+                SerperDevTool(),
+                ScrapeWebsiteTool(),
+                DirectoryReadTool('resources/drafts'),
+                FileWriterTool(),
+                FileReadTool(),
+                ArxivPaperTool(),
+                LinkedInPostAnalyzer(),
+                ResearchTopicAnalyzer(),
+                ResumeOptimizer(),
+                InnovationTracker(),
+                ResearchPaperAnalyzer()
+            ],
+            inject_date=True,
+            allow_delegation=True,
+            max_rpm=3,
+            max_iter=3,
+            verbose=True
+        )
+    
+    @agent
+    def research_blog_writer(self) -> Agent:
+        return Agent(
+            config=self.agents_config['research_blog_writer'],
+            tools=[
+                SerperDevTool(),
+                ScrapeWebsiteTool(),
+                DirectoryReadTool('resources/drafts'),
+                FileWriterTool(),
+                FileReadTool(),
+                ArxivPaperTool(),
+                LinkedInPostAnalyzer(),
+                ResearchTopicAnalyzer(),
+                ResumeOptimizer(),
+                InnovationTracker(),
+                ResearchPaperAnalyzer()
+            ],
+            max_rpm=3,
+            max_iter=2,
+            allow_delegation=True,
+            inject_date=True,
+            verbose=True
+        )
+    
+    @agent
+    def content_optimizer(self) -> Agent:
+        return Agent(
+            config=self.agents_config['content_optimizer'],
+            tools=[
+                SerperDevTool(),
+                ScrapeWebsiteTool(),
+                DirectoryReadTool('resources/drafts'),
+                FileWriterTool(),
+                FileReadTool(),
+                ArxivPaperTool(),
+                LinkedInPostAnalyzer(),
+                ResearchTopicAnalyzer(),
+                ResumeOptimizer(),
+                InnovationTracker(),
+                ResearchPaperAnalyzer()
+            ],
+            verbose=True,
+            allow_delegation=True,
+            max_rpm=3,
+            max_iter=2,
+            reasoning=False
+        )
+    
+    @agent
+    def content_summarizer(self) -> Agent:
+        return Agent(
+            config=self.agents_config['content_summarizer'],
+            tools=[
+                SerperDevTool(),
+                ScrapeWebsiteTool(),
+                DirectoryReadTool('resources/drafts'),
+                FileWriterTool(),
+                FileReadTool(),
+                ArxivPaperTool(),
+                LinkedInPostAnalyzer(),
+                ResearchTopicAnalyzer(),
+                ResumeOptimizer(),
+                InnovationTracker(),
+                ResearchPaperAnalyzer()
+            ],
+            verbose=True,
+            allow_delegation=True,
+            max_rpm=3,
+            max_iter=2,
+            reasoning=False
+        )
+    
+    # Task definitions
     @task
-    def market_research(self) -> Task:
+    def research_market_analysis(self) -> Task:
         return Task(
-            config=self.tasks_config['market_research'], # type: ignore[index]
-            agent=self.head_of_marketing()
+            config=self.tasks_config['research_market_analysis'],
+            agent=self.ai_ml_research_scientist()
         )
-
+    
     @task
-    def prepare_post_drafts(self) -> Task:
+    def summarize_market_analysis(self) -> Task:
         return Task(
-            config=self.tasks_config['prepare_post_drafts'], # type: ignore[index]
-            agent=self.content_creator_social_media(),
-            output_file='report.md'
+            config=self.tasks_config['summarize_market_analysis'],
+            agent=self.content_summarizer()
         )
-
+    
     @task
-    def draft_blogs(self) -> Task:
+    def develop_research_strategy(self) -> Task:
         return Task(
-            config=self.tasks_config['draft_blogs'], # type: ignore[index]
-            agent=self.content_writer_blogs(),
-            output_file='blog.md'
+            config=self.tasks_config['develop_research_strategy'],
+            agent=self.ai_ml_research_scientist()
         )
-
+    
     @task
-    def seo_optimization(self) -> Task:
+    def summarize_research_strategy(self) -> Task:
         return Task(
-            config=self.tasks_config['seo_optimization'], # type: ignore[index]
-            agent=self.seo_specialist(),
-            output_file='seo_optimized_blog.md'
+            config=self.tasks_config['summarize_research_strategy'],
+            agent=self.content_summarizer()
         )
-
+    
+    @task
+    def create_research_content_calendar(self) -> Task:
+        return Task(
+            config=self.tasks_config['create_research_content_calendar'],
+            agent=self.research_content_creator()
+        )
+    
+    @task
+    def prepare_research_linkedin_posts(self) -> Task:
+        return Task(
+            config=self.tasks_config['prepare_research_linkedin_posts'],
+            agent=self.research_content_creator(),
+            output_file='resources/outputs/research_linkedin_posts.md'
+        )
+    
+    @task
+    def summarize_linkedin_posts(self) -> Task:
+        return Task(
+            config=self.tasks_config['summarize_linkedin_posts'],
+            agent=self.content_summarizer()
+        )
+    
+    @task
+    def research_topic_analysis(self) -> Task:
+        return Task(
+            config=self.tasks_config['research_topic_analysis'],
+            agent=self.research_blog_writer()
+        )
+    
+    @task
+    def draft_research_blogs(self) -> Task:
+        return Task(
+            config=self.tasks_config['draft_research_blogs'],
+            agent=self.research_blog_writer(),
+            output_file='resources/outputs/research_blogs.md'
+        )
+    
+    @task
+    def optimize_research_content(self) -> Task:
+        return Task(
+            config=self.tasks_config['optimize_research_content'],
+            agent=self.content_optimizer(),
+            output_file='resources/drafts/optimized_research_content.md'
+        )
+    
     @crew
     def crew(self) -> Crew:
-        """Creates the Marketing crew"""
-        # To learn how to add knowledge sources to your crew, check out the documentation:
-        # https://docs.crewai.com/concepts/knowledge#what-is-knowledge
-
+        """Creates the AI/ML Research Scientist LinkedIn Marketing and Research Publication crew"""
         return Crew(
-            agents=self.agents, # Automatically created by the @agent decorator
-            tasks=self.tasks, # Automatically created by the @task decorator
+            agents=[
+                self.ai_ml_research_scientist(),
+                self.research_content_creator(),
+                self.research_blog_writer(),
+                self.content_optimizer(),
+                self.content_summarizer()
+            ],
+            tasks=[
+                self.research_market_analysis(),
+                self.summarize_market_analysis(),
+                self.develop_research_strategy(),
+                self.summarize_research_strategy(),
+                self.create_research_content_calendar(),
+                self.prepare_research_linkedin_posts(),
+                self.summarize_linkedin_posts(),
+                self.research_topic_analysis(),
+                self.draft_research_blogs(),
+                self.optimize_research_content()
+            ],
             process=Process.sequential,
-            verbose=True,
-            # process=Process.hierarchical, # In case you wanna use that instead https://docs.crewai.com/how-to/Hierarchical/
+            verbose=True
         )

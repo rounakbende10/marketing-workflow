@@ -1,4 +1,43 @@
-User name is John Doe.
-User is an AI Engineer.
-User is interested in AI Agents.
-User is based in San Francisco, California.
+User name is Rounak Bende.
+User is an AI/ML Research Scientist with expertise in LLMs, RAG systems, MLOps, and end-to-end ML deployment.
+User is actively seeking senior AI/ML research scientist roles in Technology, Healthcare, and Finance industries.
+User is based in United States (open to relocation anywhere in USA).
+
+RESUME HIGHLIGHTS:
+- 5+ years of experience in AI/ML, NLP, and MLOps with expertise in LLMs (GPT-4, Llama-3, BERT)
+- Built AI agent RAG systems with 99.9% uptime and improved response accuracy by 18%
+- Developed LLM Speech Co-pilot using Whisper, GPT-4o, DSP for instant meeting summaries
+- Enhanced BERT-based intent classification F1 score by 12% using QLoRA and PEFT
+- Orchestrated LangChain workflows with Kafka/Airflow, reducing hallucinations by 18%
+- Built ML pipelines for clinical AI, cutting model error by 10% in clinical studies
+- Delivered GenAI features scaling content generation and automation in production by 3x
+- Implemented reinforcement learning for credit scoring and pricing models
+- Deployed NLP transformers for contract parsing, saving 240+ hours per month
+- Master's in Data Science from Northeastern University with 3.9/4.0 GPA
+
+RESEARCH SCIENTIST GOALS:
+- Position as leading AI/ML research scientist and thought leader
+- Showcase cutting-edge research and innovation capabilities
+- Attract senior research scientist roles in top tech companies and research labs
+- Demonstrate ability to stay current with latest research and optimal methods
+- Establish thought leadership in emerging AI/ML technologies
+
+RESEARCH INTERESTS:
+- Advanced LLM architectures and optimization techniques
+- RAG systems and vector databases (Chroma DB, Pinecone)
+- MLOps and production ML deployment
+- Healthcare AI and clinical applications
+- Explainable AI and model interpretability
+- Reinforcement learning and autonomous systems
+- Multi-modal AI (speech, text, vision)
+- Edge AI and real-time inference
+- Novel ML architectures and algorithms
+- AI safety and alignment research
+
+TARGET AUDIENCE:
+- Senior AI/ML research scientist hiring managers
+- Research lab directors and principal investigators
+- AI/ML researchers and practitioners
+- Healthcare and finance AI research teams
+- MLOps and platform engineering leaders
+- Academic and industry research collaborators

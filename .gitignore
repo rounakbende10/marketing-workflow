@@ -179,3 +179,88 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+# MLflow artifacts and database
+mlflow_utils/mlflow_artifacts/
+mlflow_artifacts/
+*.db
+*.sqlite
+*.sqlite3
+
+# Generated content and outputs
+resources/outputs/
+resources/drafts/
+*.md
+!README.md
+!MLFLOW_SETUP.md
+
+# API Keys and sensitive data
+.env
+.env.local
+.env.production
+.env.staging
+
+# Logs and temporary files
+*.log
+logs/
+temp/
+tmp/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# CrewAI specific
+.crewai/
+crewai_cache/

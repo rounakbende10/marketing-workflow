@@ -1,131 +1,227 @@
-market_research:
-  description: >
-    Conduct market research to identify trends, opportunities, and challenges in the industry. Focus on understanding customer needs, competitor strategies, and market dynamics to inform marketing decisions.
-    <Product Name>{product_name}</Product Name>
-    <Product Description>{product_description}</Product Description>
-    <Target Audience>{target_audience}</Target Audience>
-    <Budget>{budget}</Budget>
+research_market_analysis:
+  description: |
+    Conduct comprehensive market research and analysis of the latest trending AI/ML LLM research topic. 
+    Focus on ONE specific trending topic that is currently making waves in the AI/ML community.
+    
+    Your analysis should include:
+    1. **Deep Technical Analysis**: Comprehensive examination of the LLM architecture, methodology, and implementation details
+    2. **Performance Benchmarking**: Detailed performance metrics, scores, and comparisons with previous state-of-the-art models
+    3. **Technical Advantages**: Specific technical benefits, innovations, and breakthroughs
+    4. **Technical Disadvantages**: Limitations, challenges, and areas for improvement
+    5. **Implementation Insights**: Practical considerations for real-world deployment
+    6. **Research Impact**: Influence on the broader AI/ML research community
+    
+    Focus on providing extremely detailed technical analysis that demonstrates deep understanding of LLM architectures, training methodologies, and performance optimization techniques.
+    
+    Output a comprehensive research market analysis report that will serve as the foundation for all subsequent content creation.
+  expected_output: |
+    A detailed research market analysis report covering:
+    - Executive summary of the trending AI/ML LLM topic
+    - Deep technical analysis of architecture and methodology
+    - Comprehensive performance benchmarking and comparisons
+    - Detailed advantages and disadvantages analysis
+    - Implementation considerations and practical insights
+    - Research impact and future implications
+    - Technical recommendations and next steps
 
-    Current date: {current_date}
+summarize_market_analysis:
+  description: |
+    Summarize the comprehensive market analysis into a concise, focused summary that preserves all key technical insights while reducing content length.
+    
+    Your summarization should:
+    1. **Preserve Technical Depth**: Maintain all critical technical details and insights
+    2. **Reduce Redundancy**: Eliminate repetitive information and verbose explanations
+    3. **Focus on Key Points**: Highlight the most important findings and conclusions
+    4. **Maintain Accuracy**: Ensure all technical information remains precise and correct
+    5. **Optimize for Processing**: Create content that can be efficiently processed by subsequent agents
+    
+    Focus on creating a concise summary that captures the essence of the analysis while significantly reducing token usage.
+  expected_output: |
+    A concise summary of the market analysis including:
+    - Condensed executive summary with key technical insights
+    - Essential technical analysis points
+    - Critical performance benchmarks and comparisons
+    - Key advantages and disadvantages
+    - Core implementation insights
+    - Main research impact and recommendations
+    - Reduced content length while preserving technical accuracy
 
-  expected_output: >
-    A comprehensive market research report that includes:
-    - Analysis of market trends and opportunities
-    - Competitor analysis
-    - Customer insights and needs
-    - Recommendations for marketing strategies
+develop_research_strategy:
+  description: |
+    Based on the summarized market research analysis, develop a comprehensive research strategy for creating LinkedIn posts and research blogs.
+    
+    The strategy should focus on:
+    1. **Content Themes**: Key technical themes and topics to cover
+    2. **Technical Depth**: How to maintain high technical sophistication
+    3. **Audience Targeting**: Specific senior research scientist and lab director audiences
+    4. **Content Mix**: Balance between LinkedIn posts and detailed research blogs
+    5. **Technical Storytelling**: How to present complex technical concepts clearly
+    6. **Engagement Strategy**: How to drive meaningful professional discussions
+    
+    Ensure the strategy emphasizes deep technical analysis and thought leadership positioning.
+  expected_output: |
+    A comprehensive research content strategy document including:
+    - Content themes and technical focus areas
+    - Target audience analysis and engagement approach
+    - Content mix and distribution strategy
+    - Technical storytelling framework
+    - Success metrics and evaluation criteria
 
-prepare_marketing_strategy:
-  description: >
-    Develop a marketing strategy that aligns with the company's goals and objectives. The strategy should include target audience segmentation, positioning, messaging, and marketing channels.
-    <Product Name>{product_name}</Product Name>
-    <Product Description>{product_description}</Product Description>
-    <Target Audience>{target_audience}</Target Audience>
+summarize_research_strategy:
+  description: |
+    Summarize the comprehensive research strategy into a focused, actionable plan that can be efficiently processed by content creation agents.
+    
+    Your summarization should:
+    1. **Extract Key Elements**: Identify the most important strategic components
+    2. **Create Actionable Items**: Convert strategy into specific, implementable tasks
+    3. **Reduce Complexity**: Simplify complex strategic frameworks into clear directives
+    4. **Maintain Focus**: Ensure the summary aligns with the core research objectives
+    5. **Optimize for Execution**: Create a plan that content creators can follow efficiently
+    
+    Focus on creating a streamlined strategy summary that guides content creation while minimizing token usage.
+  expected_output: |
+    A concise research strategy summary including:
+    - Key content themes and focus areas
+    - Essential audience targeting information
+    - Core content mix recommendations
+    - Critical technical storytelling elements
+    - Main engagement strategies
+    - Streamlined execution plan
 
-    Current date: {current_date}
-    Refer to the market research report for insights and building the strategy.
+create_research_content_calendar:
+  description: |
+    Create a detailed content calendar for LinkedIn posts and research blogs based on the summarized research strategy.
+    
+    The calendar should include:
+    1. **LinkedIn Post Schedule**: 5-7 high-quality LinkedIn posts with specific topics
+    2. **Research Blog Schedule**: 2-3 comprehensive research blog articles
+    3. **Technical Focus Areas**: Specific technical aspects to cover in each piece
+    4. **Content Themes**: How posts and blogs will complement each other
+    5. **Engagement Timing**: Optimal posting times for maximum professional engagement
+    6. **Content Flow**: Logical progression from introductory to advanced technical content
+    
+    Each piece should demonstrate deep technical expertise and thought leadership.
+  expected_output: |
+    A detailed content calendar with:
+    - Specific LinkedIn post topics and technical focus
+    - Research blog article outlines and technical depth
+    - Posting schedule and timing recommendations
+    - Content flow and progression strategy
+    - Technical expertise demonstration plan
 
-  expected_output: >
-    A detailed marketing strategy document that includes:
-    - Target audience segmentation
-    - Required budget
-    - Recommended marketing channels
-    - Plan of action for the week containing 3 blogs to write, 2 reels to film, and 5 social media posts to create
-    - Key performance indicators (KPIs) to measure success
-    Store the marketing strategy in 'resources/drafts/marketing_strategy.md'.
+prepare_research_linkedin_posts:
+  description: |
+    Create 5-7 high-quality LinkedIn posts based on the research market analysis and content calendar.
+    
+    Each post should:
+    1. **Demonstrate Technical Expertise**: Show deep understanding of LLM architectures and performance
+    2. **Focus on ONE Trending Topic**: Deep dive into the specific AI/ML LLM topic identified
+    3. **Include Technical Details**: Architecture insights, performance metrics, implementation considerations
+    4. **Drive Professional Engagement**: Encourage meaningful discussions among senior researchers
+    5. **Use Strategic Hashtags**: Research-focused hashtags for discoverability
+    6. **Include Call-to-Actions**: Encourage professional networking and collaboration
+    
+    Posts should be technically sophisticated while remaining accessible to senior research scientists and lab directors.
+    
+    Focus on providing unique technical insights and thought leadership perspectives.
+  expected_output: |
+    5-7 LinkedIn posts that include:
+    - Deep technical analysis of the trending LLM topic
+    - Performance benchmarking insights and comparisons
+    - Technical advantages and disadvantages discussion
+    - Implementation considerations and practical insights
+    - Strategic hashtags for research community discoverability
+    - Professional call-to-actions for networking and collaboration
+    - Thought leadership positioning and expertise demonstration
 
-create_content_calendar:
-  description: >
-    Create a content calendar that outlines the topics, formats, and publishing schedule for the next one week. The calendar should align with the marketing strategy and include key themes and campaigns.
-    <Product Name>{product_name}</Product Name>
-    <Product Description>{product_description}</Product Description>
-    <Target Audience>{target_audience}</Target Audience>
+summarize_linkedin_posts:
+  description: |
+    Summarize the generated LinkedIn posts to create a concise overview that can be efficiently processed by subsequent agents.
+    
+    Your summarization should:
+    1. **Extract Key Messages**: Identify the main technical insights and themes
+    2. **Consolidate Content**: Combine similar points and eliminate redundancy
+    3. **Preserve Technical Depth**: Maintain all critical technical information
+    4. **Highlight Engagement Elements**: Focus on hashtags, call-to-actions, and engagement strategies
+    5. **Optimize for Processing**: Create content that reduces token usage while maintaining quality
+    
+    Focus on creating a streamlined summary that captures the essence of all LinkedIn posts.
+  expected_output: |
+    A concise LinkedIn posts summary including:
+    - Key technical insights and themes covered
+    - Essential performance benchmarks and comparisons
+    - Critical advantages and disadvantages discussed
+    - Main implementation considerations
+    - Strategic hashtag recommendations
+    - Core engagement strategies
+    - Streamlined content overview
 
-    Current date: {current_date}
+research_topic_analysis:
+  description: |
+    Conduct an in-depth analysis of the specific trending AI/ML LLM research topic identified in the market research.
+    
+    The analysis should cover:
+    1. **Architecture Deep Dive**: Detailed examination of the LLM architecture and methodology
+    2. **Performance Analysis**: Comprehensive benchmarking against previous models
+    3. **Technical Innovation**: Specific technical breakthroughs and innovations
+    4. **Implementation Challenges**: Technical challenges and limitations
+    5. **Research Implications**: Impact on the broader AI/ML research community
+    6. **Future Directions**: Potential research directions and improvements
+    
+    Provide extremely detailed technical analysis that demonstrates expert-level understanding of LLM research and development.
+  expected_output: |
+    A comprehensive technical analysis report including:
+    - Detailed architecture examination and methodology analysis
+    - Performance benchmarking with specific metrics and comparisons
+    - Technical innovation identification and impact assessment
+    - Implementation challenge analysis and solution approaches
+    - Research community impact and future direction recommendations
+    - Expert-level technical insights and recommendations
 
-  expected_output: >
-    A content calendar that includes:
-    - Topics and formats for each piece of content specified in the marketing strategy
-    - Publishing schedule
-    - Key themes and campaigns
-    Store the content calendar in 'resources/drafts/content_calendar.md'.
+draft_research_blogs:
+  description: |
+    Create 2-3 comprehensive research blog articles based on the technical analysis and content calendar.
+    
+    Each blog should:
+    1. **Deep Technical Content**: Comprehensive technical analysis of the LLM topic
+    2. **Performance Benchmarking**: Detailed performance comparisons and analysis
+    3. **Implementation Guidance**: Practical implementation considerations and code examples
+    4. **Technical Diagrams**: Clear technical explanations with architectural insights
+    5. **Research Context**: Broader research implications and future directions
+    6. **Professional Positioning**: Demonstrate thought leadership and expertise
+    
+    Blogs should be technically sophisticated and provide substantial value to the research community.
+    
+    Focus on creating content that establishes strong thought leadership in the AI/ML research space.
+  expected_output: |
+    2-3 comprehensive research blog articles including:
+    - Deep technical analysis of LLM architecture and methodology
+    - Performance benchmarking with detailed metrics and comparisons
+    - Implementation guidance with practical considerations
+    - Technical diagrams and architectural explanations
+    - Research context and future direction analysis
+    - Thought leadership positioning and expertise demonstration
+    - Professional insights and recommendations for the research community
 
-prepare_post_drafts:
-  description: >
-    Prepare drafts for social media posts and email campaigns based on the content calendar. Ensure that the drafts are engaging, aligned with the brand voice, and optimized for each platform.
-    <Product Name>{product_name}</Product Name>
-    <Product Description>{product_description}</Product Description>
-    <Target Audience>{target_audience}</Target Audience>
-
-    Current date: {current_date}
-
-  expected_output: >
-    Drafts for:
-    - Social media posts: LinkedIn, Twitter, Instagram
-    - Email campaigns
-    Each draft should be ready for review and feedback. Save the drafts in 'resources/drafts/posts/' folder in markdown format.
-
-prepare_scripts_for_reels:
-  description: >
-    Prepare scripts for Instagram reels that align with the content calendar and marketing strategy. The scripts should be engaging, concise, and tailored to the target audience.
-    <Product Name>{product_name}</Product Name>
-    <Product Description>{product_description}</Product Description>
-    <Target Audience>{target_audience}</Target Audience>
-
-    Current date: {current_date}
-
-  expected_output: >
-    Scripts for Instagram reels that include:
-    - Engaging hooks
-    - Key messages
-    - Call to action
-    Each script should be ready for filming and editing. Save the scripts in 'resources/drafts/reels/' folder in markdown format. And assign tasks to the relevant team members.
-
-content_research_for_blogs:
-  description: >
-    Conduct research for blog topics that align with the content calendar and marketing strategy. The research should include keyword analysis, competitor blogs, and industry trends.
-    <Product Name>{product_name}</Product Name>
-    <Product Description>{product_description}</Product Description>
-    <Target Audience>{target_audience}</Target Audience>
-
-    Current date: {current_date}
-
-  expected_output: >
-    A research report that includes:
-    - Keyword analysis
-    - Competitor blog insights
-    - Industry trends
-    - Suggested blog topics and outlines
-
-draft_blogs:
-  description: >
-    Draft blogs based on the research report and content calendar. Each blog should be well-structured, engaging, and optimized for SEO.
-    <Product Name>{product_name}</Product Name>
-    <Product Description>{product_description}</Product Description>
-    <Target Audience>{target_audience}</Target Audience>
-
-    Current date: {current_date}
-
-  expected_output: >
-    Drafts for blogs that include:
-    - Engaging introductions
-    - Well-structured content
-    - SEO optimization
-    - Ready for review and feedback
-    Each draft should be ready for review and saved in 'resources/drafts/blogs/' folder in markdown format.
-
-seo_optimization:
-  description: >
-    Optimize the drafted blogs for search engines to improve visibility and drive organic traffic. This includes keyword optimization, meta tags, and internal linking.
-    <Product Name>{product_name}</Product Name>
-    <Product Description>{product_description}</Product Description>
-    <Target Audience>{target_audience}</Target Audience>
-
-    Current date: {current_date}
-
-  expected_output: >
-    SEO-optimized blogs that include:
-    - Keyword-rich titles and headings
-    - Meta descriptions
-    - Internal links
-    - Ready for final review and publication
+optimize_research_content:
+  description: |
+    Optimize all created content for maximum impact and engagement in the AI/ML research community.
+    
+    The optimization should focus on:
+    1. **Technical Accuracy**: Ensure all technical details are precise and up-to-date
+    2. **Content Quality**: Enhance readability while maintaining technical depth
+    3. **SEO Optimization**: Optimize for research-focused search terms and discoverability
+    4. **Engagement Enhancement**: Improve call-to-actions and professional networking opportunities
+    5. **Thought Leadership**: Strengthen positioning as an AI/ML research expert
+    6. **Content Consistency**: Ensure all pieces work together cohesively
+    
+    Maintain the high technical standards while improving accessibility and engagement.
+  expected_output: |
+    Optimized content package including:
+    - Technically accurate and up-to-date content
+    - Enhanced readability and accessibility
+    - SEO-optimized research-focused content
+    - Improved engagement and networking opportunities
+    - Strengthened thought leadership positioning
+    - Consistent and cohesive content strategy
+    - Professional quality standards for research community

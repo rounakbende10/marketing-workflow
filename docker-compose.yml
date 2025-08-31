@@ -1,0 +1,82 @@
+version: '3.8'
+
+services:
+  # MLflow tracking server
+  mlflow-server:
+    build: .
+    container_name: mlflow-server
+    ports:
+      - "5001:5001"
+    volumes:
+      - ./mlflow_utils/mlflow_artifacts:/app/mlflow_utils/mlflow_artifacts
+      - ./resources:/app/resources
+    environment:
+      - MLFLOW_TRACKING_URI=http://localhost:5001
+      - MLFLOW_EXPERIMENT_NAME=ai-ml-research-scientist-marketing
+      - PYTHONPATH=/app
+    command: python mlflow_utils/start_server.py
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5001/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Main marketing workflow application
+  marketing-workflow:
+    build: .
+    container_name: marketing-workflow
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./resources:/app/resources
+      - ./mlflow_utils/mlflow_artifacts:/app/mlflow_utils/mlflow_artifacts
+      - ./knowledge:/app/knowledge
+    environment:
+      - MLFLOW_TRACKING_URI=http://mlflow-server:5001
+      - MLFLOW_EXPERIMENT_NAME=ai-ml-research-scientist-marketing
+      - PYTHONPATH=/app
+      - CREWAI_VERBOSE=1
+    depends_on:
+      mlflow-server:
+        condition: service_healthy
+    restart: unless-stopped
+    command: tail -f /dev/null  # Keep container running
+
+  # Optional Redis for caching and session storage
+  redis:
+    image: redis:7-alpine
+    container_name: marketing-workflow-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Optional Nginx reverse proxy
+  nginx:
+    image: nginx:alpine
+    container_name: marketing-workflow-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./docker/nginx/conf.d:/etc/nginx/conf.d:ro
+    depends_on:
+      - mlflow-server
+      - marketing-workflow
+    restart: unless-stopped
+
+volumes:
+  redis_data:
+
+networks:
+  default:
+    name: marketing-workflow-network

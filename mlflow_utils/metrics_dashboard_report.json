@@ -1,0 +1,136 @@
+{
+  "timestamp": "2025-08-30T11:22:15.763753",
+  "content_metrics": {
+    "content_generation": {
+      "linkedin_posts_generated": 27,
+      "linkedin_posts_total_words": 2441,
+      "linkedin_posts_avg_length": 90.4074074074074,
+      "linkedin_posts_with_hashtags": 45,
+      "linkedin_posts_with_visualizations": 0,
+      "linkedin_posts_technical_depth": 1.0,
+      "research_blogs_generated": 27,
+      "research_blogs_total_words": 2471,
+      "research_blogs_avg_length": 91.51851851851852,
+      "research_blogs_with_code": 6,
+      "research_blogs_with_diagrams": 0,
+      "research_blogs_technical_depth": 1.0,
+      "technical_visualizations_created": 0,
+      "architecture_diagrams": 0,
+      "performance_charts": 0,
+      "comparison_infographics": 0,
+      "implementation_flowcharts": 0
+    },
+    "technical_analysis": {},
+    "quality_metrics": {
+      "technical_depth_score": 0.01,
+      "research_credibility_score": 0.6,
+      "innovation_tracking_score": 1.0,
+      "practical_applicability_score": 0.8,
+      "content_completeness_score": 0.7
+    },
+    "business_impact": {
+      "target_audience_relevance": 0.95,
+      "thought_leadership_potential": 0.95,
+      "networking_opportunity_score": 0.9,
+      "career_advancement_potential": 0.7
+    },
+    "performance_metrics": {},
+    "research_focus": {
+      "llm_architecture_coverage": 0.85,
+      "performance_optimization_coverage": 0.8,
+      "emerging_technology_coverage": 0.85,
+      "implementation_guidance_coverage": 0.8
+    },
+    "engagement_metrics": {
+      "hashtag_optimization_score": 1.0,
+      "call_to_action_effectiveness": 0.8,
+      "content_shareability_score": 0.8,
+      "professional_networking_score": 0.7
+    }
+  },
+  "experiment_summary": {
+    "total_runs": 5,
+    "experiment_name": "ai-ml-research-scientist-marketing",
+    "runs": [
+      {
+        "run_id": "ee825b7d58cd4af684d0d59b40d52e4a",
+        "run_name": "crewai_deep_technical_analysis",
+        "start_time": "2025-08-30 11:05:05",
+        "status": "FAILED",
+        "metrics": {},
+        "params": {
+          "user_profession": "AI/ML Research Scientist",
+          "target_industries": "Technology, Healthcare, Finance, Research Labs, AI Companies",
+          "user_location": "United States (open to relocation)",
+          "user_experience": "5+ years in AI/ML research and engineering with expertise in LLM architectures, performance analysis, and technical benchmarking",
+          "user_projects": "InboxAI: Intelligent Email Assistant using LLMs - Deployed LangGraph, OpenAI/Llama3 LLMs, and Gmail/Outlook APIs for seamless real-time email retrieval and dynamic reply generation. Orchestrated ML workflows with Apache Airflow, leveraging Chroma DB vector embeddings for rapid semantic search across email data. Health Bot: Healthcare Assistant using LLMs - Constructed a Bi-RNN, GloVe, BERT pipeline for NLP-driven disease diagnosis, boosting precision in healthcare conversational AI tasks. Enhanced response accuracy through LoRA and RLHF, enabling advanced semantic interaction and nuanced dialogue with healthcare users.",
+          "research_interests": "Advanced LLM architectures, Performance benchmarking and analysis, Transformer optimizations, Training methodologies, Efficiency improvements, Multimodal LLMs, RAG systems optimization, Technical implementation analysis, Comparative performance studies, Novel training techniques",
+          "current_date": "2025-08-30"
+        }
+      },
+      {
+        "run_id": "520afb9dc1314d98a3c7d999866573a6",
+        "run_name": "crewai_deep_technical_analysis",
+        "start_time": "2025-08-30 10:49:33",
+        "status": "FAILED",
+        "metrics": {},
+        "params": {
+          "user_profession": "AI/ML Research Scientist",
+          "target_industries": "Technology, Healthcare, Finance, Research Labs, AI Companies",
+          "user_location": "United States (open to relocation)",
+          "user_experience": "5+ years in AI/ML research and engineering with expertise in LLM architectures, performance analysis, and technical benchmarking",
+          "user_projects": "InboxAI: Intelligent Email Assistant using LLMs - Deployed LangGraph, OpenAI/Llama3 LLMs, and Gmail/Outlook APIs for seamless real-time email retrieval and dynamic reply generation. Orchestrated ML workflows with Apache Airflow, leveraging Chroma DB vector embeddings for rapid semantic search across email data. Health Bot: Healthcare Assistant using LLMs - Constructed a Bi-RNN, GloVe, BERT pipeline for NLP-driven disease diagnosis, boosting precision in healthcare conversational AI tasks. Enhanced response accuracy through LoRA and RLHF, enabling advanced semantic interaction and nuanced dialogue with healthcare users.",
+          "research_interests": "Advanced LLM architectures, Performance benchmarking and analysis, Transformer optimizations, Training methodologies, Efficiency improvements, Multimodal LLMs, RAG systems optimization, Technical implementation analysis, Comparative performance studies, Novel training techniques",
+          "current_date": "2025-08-30"
+        }
+      },
+      {
+        "run_id": "a2afafd6d4834ccca9c76b147022bfc5",
+        "run_name": "crewai_deep_technical_analysis",
+        "start_time": "2025-08-30 10:48:49",
+        "status": "FAILED",
+        "metrics": {},
+        "params": {
+          "user_profession": "AI/ML Research Scientist",
+          "target_industries": "Technology, Healthcare, Finance, Research Labs, AI Companies",
+          "user_location": "United States (open to relocation)",
+          "user_experience": "5+ years in AI/ML research and engineering with expertise in LLM architectures, performance analysis, and technical benchmarking",
+          "user_projects": "InboxAI: Intelligent Email Assistant using LLMs - Deployed LangGraph, OpenAI/Llama3 LLMs, and Gmail/Outlook APIs for seamless real-time email retrieval and dynamic reply generation. Orchestrated ML workflows with Apache Airflow, leveraging Chroma DB vector embeddings for rapid semantic search across email data. Health Bot: Healthcare Assistant using LLMs - Constructed a Bi-RNN, GloVe, BERT pipeline for NLP-driven disease diagnosis, boosting precision in healthcare conversational AI tasks. Enhanced response accuracy through LoRA and RLHF, enabling advanced semantic interaction and nuanced dialogue with healthcare users.",
+          "research_interests": "Advanced LLM architectures, Performance benchmarking and analysis, Transformer optimizations, Training methodologies, Efficiency improvements, Multimodal LLMs, RAG systems optimization, Technical implementation analysis, Comparative performance studies, Novel training techniques",
+          "current_date": "2025-08-30"
+        }
+      },
+      {
+        "run_id": "5bbb30b0efe3403397395217e30d359a",
+        "run_name": "crewai_deep_technical_analysis",
+        "start_time": "2025-08-30 10:47:41",
+        "status": "FAILED",
+        "metrics": {},
+        "params": {
+          "user_profession": "AI/ML Research Scientist",
+          "target_industries": "Technology, Healthcare, Finance, Research Labs, AI Companies",
+          "user_location": "United States (open to relocation)",
+          "user_experience": "5+ years in AI/ML research and engineering with expertise in LLM architectures, performance analysis, and technical benchmarking",
+          "user_projects": "InboxAI: Intelligent Email Assistant using LLMs - Deployed LangGraph, OpenAI/Llama3 LLMs, and Gmail/Outlook APIs for seamless real-time email retrieval and dynamic reply generation. Orchestrated ML workflows with Apache Airflow, leveraging Chroma DB vector embeddings for rapid semantic search across email data. Health Bot: Healthcare Assistant using LLMs - Constructed a Bi-RNN, GloVe, BERT pipeline for NLP-driven disease diagnosis, boosting precision in healthcare conversational AI tasks. Enhanced response accuracy through LoRA and RLHF, enabling advanced semantic interaction and nuanced dialogue with healthcare users.",
+          "research_interests": "Advanced LLM architectures, Performance benchmarking and analysis, Transformer optimizations, Training methodologies, Efficiency improvements, Multimodal LLMs, RAG systems optimization, Technical implementation analysis, Comparative performance studies, Novel training techniques",
+          "current_date": "2025-08-30"
+        }
+      },
+      {
+        "run_id": "841624c6d76d422cb7e7aff46345345c",
+        "run_name": "test_run",
+        "start_time": "2025-08-30 10:46:21",
+        "status": "FINISHED",
+        "metrics": {
+          "test_metric": 42.0,
+          "success_rate": 1.0
+        },
+        "params": {
+          "test_param": "test_value",
+          "timestamp": "2025-08-30T10:46:21.753319"
+        }
+      }
+    ]
+  },
+  "dashboard_version": "1.0"
+}
